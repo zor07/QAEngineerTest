@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Appium Android Testing WebApp</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(testplans)}">
+        <h2>Test Plan List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Test Plan Id</th>
+                <th>Description</th>
+                <th>Test Cases</th>
+                <th>Tests Qty</th>
+                <th>Tests Passed</th>
+                <th>Tests Failed</th>
+                <th>Actions</th>
+                <th>Run All Test Cases</th>
+            </tr>
+            <tr th:each="testplan : ${testplans}">
+                <td th:text="${testplan.id}"><a href="/testplan/${testplan.id}">Id</a></td>
+                <td th:text="${testplan.testPlanId}">Test Plan Id</td>
+                <td th:text="${testplan.description}">Description</td>
+                <td><a th:href="${ '/testplan/' + testplan.id + '/testcases'}">Show Test Cases</a></td>
+                <td th:text="${testplan.testCasesQty}">Test Cases Qty</td>
+                <td th:text="${testplan.testCasesPassed}">Test Cases Passed</td>
+                <td th:text="${testplan.testCasesFailed}">Test Cases Failed</td>
+                <td>
+                    <ul class="list-inline">
+                        <li><a th:href="${ '/testplan/' + testplan.id}">View</a></li>
+                        <li><a th:href="${'/testplan/edit/' + testplan.id}">Edit</a></li>
+                        <li><a th:href="${'/testplan/delete/' + testplan.id}">Delete</a></li>
+                    </ul>
+                </td>
+                <td><a th:href="${ '/testplan/' + testplan.id + '/run'}">Run</a></td>
+            </tr>
+        </table>
+    </div>
+    <a th:href="${ '/testplan/new'}">Create Test Plan</a>
+</div>
+
+</body>
+</html>

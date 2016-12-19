@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Settings Form</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Appium Settings Details</h2>
+    <div>
+        <form class="form-horizontal" th:object="${settings}" th:action="@{/savesettings}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <input type="hidden" th:field="*{version}"/>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Application Path:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{applicationPath}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Application Package:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{applicationPackage}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Application Activity:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{applicationActivity}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Android Version:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{androidVersion}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Device Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{deviceName}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button One ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{one}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Two ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{two}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Three ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{three}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Four ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{four}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Five ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{five}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Six ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{six}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Seven ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{seven}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Eight ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{eight}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Nine ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{nine}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Zero ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{zero}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Add ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{add}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Subtract ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{subtract}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Multiply ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{multiply}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Divide ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{divide}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Equal ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{equals}" th:required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Brackets ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{brackets}"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Point ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{point}"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Result ID:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{result}"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

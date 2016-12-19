@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Appium Android Testing WebApp</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Test Plan Details</h2>
+    <div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Test Plan Id:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${testplan.testPlanId}">Test Plan Id</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Description:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${testplan.description}">Description</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Test Cases Qty:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${testplan.testCasesQty}">Test Cases Qty</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Test Cases Passed:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${testplan.testCasesPassed}">Test Cases Passed</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Test Cases Failed:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${testplan.testCasesFailed}">Test Cases Failed</p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

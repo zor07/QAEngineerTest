@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Appium Android Testing WebApp</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+
+
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <h2 th:text="'Test Plan: ' + ${testplan.id}"> </h2>
+    <div th:if="${#lists.isEmpty(testcases)}">
+        <p>No Test Cases</p>
+    </div>
+
+    <div th:if="${not #lists.isEmpty(testcases)}">
+        <h3>Test Case List</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Test Case Id</th>
+                <th>Description</th>
+                <th>Steps</th>
+                <th>Expected Result</th>
+                <th>Actual Result</th>
+                <th>Status</th>
+                <th>Actions</th>
+                <th>Run Test Case</th>
+            </tr>
+
+            <tr th:each="testcase : ${testcases}">
+                <td th:text="${testcase.id}"></td>
+                <td th:text="${testcase.testCaseId}"></td>
+                <td th:text="${testcase.description}"></td>
+                <td th:text="${testcase.steps}"></td>
+                <td th:text="${testcase.expectedResult}"></td>
+                <td th:text="${testcase.actualResult}"></td>
+                <td th:text="${testcase.status}"></td>
+                <td>
+                    <ul class="list-inline">
+                        <li><a th:href="${ '/testplan/' + testplan.id + '/testcase/' + testcase.id}">View</a></li>
+                        <li><a th:href="${ '/testplan/' + testplan.id + '/testcase/edit/' + testcase.id}">Edit</a></li>
+                        <li><a th:href="${ '/testplan/' + testplan.id + '/testcase/delete/' + testcase.id}">Delete</a></li>
+                    </ul>
+                </td>
+
+                <td><a th:href="${ '/testplan/' + testplan.id + '/testcase/' + testcase.id + '/run'}">Run</a></td>
+
+            </tr>
+        </table>
+    </div>
+
+    <a th:href="${ '/testplan/' + testplan.id + '/testcase/new'}">Create Test Case</a>
+</div>
+
+</body>
+</html>

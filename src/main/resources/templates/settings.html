@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Settings</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <h2>Appium Settings Details <a th:href="${ '/settings/edit'}">Edit</a></h2>
+    <div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Application Path:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.applicationPath}">Application Path</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Application Package:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.applicationPackage}">Application Package</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Application Activity:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.applicationActivity}">Application Activity</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Android Version:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.androidVersion}">Android Version</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Device Name:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.deviceName}">Device Name</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button One ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.one}">Button One ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Two ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.two}">Button Two ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Three ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.three}">Button Three ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Four ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.four}">Button Four ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Five ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.five}">Button Five ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Six ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.six}">Button Six ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Seven ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.seven}">Button Seven ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Eight ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.eight}">Button Eight ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Nine ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.nine}">Button Nine ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Zero ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.zero}">Button Zero ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Add ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.add}">Button Add ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Subtract ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.subtract}">Button Subtract ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Multiply ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.multiply}">Button Multiply ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Divide ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.divide}">Button Divide ID</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Equal ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.equals}"></p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Brackets ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.brackets}">Brackets</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Button Point ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.point}">Point</p></div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Result ID:</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static" th:text="${settings.result}">Result By ID</p></div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
